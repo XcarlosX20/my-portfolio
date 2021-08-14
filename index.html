@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Sierra</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <div class="btn-burguer-container" id="btn-burguer-container">
+                <div class="btn-burguer" id="btn-burguer"></div>
+            </div>
+            <div class="cont-main hidden"id="main">
+                <ul>
+                    <li id="main-item"><a class="animate__animated" href="#aboutme">About me</a></li>
+                    <li id="main-item"><a class="animate__animated" href="#skills">Skills</a></li>
+                    <li id="main-item"><a class="animate__animated" href="#portfolio">Portfolio</a></li>
+                    <li id="main-item"><a class="animate__animated" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <h1>Carlos Sierra
+                <span>Web developer</span>
+            </h1>
+            <nav class="main-navigation animate__animated">
+                <a class="animate__animated" href="#aboutme">about me</a>
+                <a class="animate__animated" href="#skills">Skills</a>
+                <a class="animate__animated" href="#portfolio">Portfolio</a>
+                <a class="animate__animated" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="video">
+        <div class="overlay">
+            <div class="content-video">
+                <h2>Welcome. This is my portfolio!
+                    <span class="span animate__animated animate__delay-1s"><a href="#contact">Do you have an idea?</a></span>
+                </h2>
+            </div>
+        </div>
+        <video id="v-control" width="100%" autoplay="autoplay" loop muted>
+            <source
+                src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.webm"
+                type="video/webm" />
+            <source
+                src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.mp4"
+                type="video/mp4" />
+            <source
+                src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.mp4"
+                type="video/ogg" />
+        </video>
+    </div>
+    <div id="aboutme" class="container aboutme">
+        <div class="image">
+            <img src="https://res.cloudinary.com/do5yybhwe/image/upload/v1620171396/UNEFM/estudents/estudent_jf39iy.png"alt="img-me">
+        </div>
+        <div class="content-aboutme">
+            <h2>Profile</h2>
+            <p class="date">From Falcon, Venezuela (GMT-4:00)</p>
+            <p class="txt">
+                Hi, I am a web developer currently I am more focused on the frontend area. With more than 2 years learning in a self-taught way mostly with online courses and putting these knowledge into practice through dev challleges. I consider myself a neat, curious, communicative person, and above all passionate about programming.
+            </p>
+            <p>Below you will see all my skills and my work done on the web, I hope you like it!</p>
+        </div>
+    </div>
+    <section id="skills" class="lineup">
+        <h3>Skills</h3>
+        <p class="day">Frontend</p>
+        <div class="stage-container container">
+
+            <div class="card rock bg-yellow">
+                <a class="stage-name" href="#">Rock</a>
+                <ul class="calendary">
+                    <li>Metallica | <span>20:00</span> </li>
+                    <li>Korn | <span>20:00</span></li>
+                    <li>Muse | <span>20:00</span></li>
+                    <li>Brealing Benjamin | <span>20:00</span></li>
+                    <li>Pearl Jam | <span>20:00</span></li>
+                </ul>
+            </div>
+            <div class="card trap bg-orange">
+                <a class="stage-name" href="#">Frontend libraries</a>
+                <ul class="calendary">
+                    <li>React<span> (Advanced) </span></li>
+                    <li>Redux<span> (Advanced) </span></li>
+                    <li>Gatsby<span> (Advanced) </span></li>
+                    <li>NextJS<span> (Advanced) </span></li>
+                    <li>Styled Components: Emotion, Material UI <span> (Advanced)</span></li>
+                </ul>
+            </div>
+        </div>
+        <p class="day">Backend</p>
+        <div class="stage-container container">
+            <div class="card llaneras bg-orange">
+                <a class="stage-name" href="#">Trap</a>
+                <ul class="calendary">
+                    <li>Bad bunny <span>| 20:00 </span></li>
+                    <li>Anoel <span>| 20:00 </span></li>
+                    <li>Ozuna <span>| 20:00 </span></li>
+                    <li>Myke Towers <span>| 20:00 </span></li>
+                    <li>Norel <span>| 20:00 </span></li>
+                </ul>
+            </div>
+            <div class="card pop bg-yellow">
+                <a class="stage-name" href="#">Trap</a>
+                <ul class="calendary">
+                    <li>Bad bunny <span>| 20:00 </span></li>
+                    <li>Anoel <span>| 20:00 </span></li>
+                    <li>Ozuna <span>| 20:00 </span></li>
+                    <li>Myke Towers <span>| 20:00 </span></li>
+                    <li>Norel <span>| 20:00 </span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--PORTFOLIO-->
+    <section id="portfolio" class="portfolio">
+        <h3>Portfolio</h3>
+        <div class="list-portafolio" id="list-portafolio">
+        </div>
+    </section>
+
+    <!--CONTACT ME-->
+    <div class="contact" id="contact">
+        <h3>Contact me</h3>
+        <div class="container-contact">
+            <form method="POST" name="contact" data-netlify="true">
+                <label class="contact-label">Fill out this form and let's get started!</label>
+                <div class="field">
+                    <label>Name:</label>
+                    <input type="text" name="name" id="NAME" placeholder="Who is u?" required>
+                </div>
+                <div class="field">
+                    <label>Email:</label>
+                    <input type="mail" name="email" id="EMAIL" placeholder="email@email.com" required>
+                </div>
+                <div class="field textarea">
+                    <label>Your message:</label>
+                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Write me what you want!" required></textarea>
+                </div>
+                <input type="submit" class="btn" value="Send">
+            </form>
+            <div class="container-social">
+                <hr>
+                <div class="social-media">
+                    <h4>... and Follow me!</h4>
+                    <p><a href="#">
+                        <i class="bi bi-linkedin"></i>
+                        My LinkedIn</a></p>
+                        <p><a href="#">
+                            <i class="bi bi-facebook"></i>
+                           My Facebook</a></p>
+                    <p><a href="#">
+                            <i class="bi bi-telegram"></i>
+                        My Telegram</a></p>
+                    <p><a href="#">
+                            <i class="bi bi-github"></i>
+                            My GitHub
+                        </a>
+                    </p>
+                    <p><a href="mailto:carlossierra850@gmail.com">
+                        <i class="bi bi-envelope-fill"></i>
+                        carlossierra850@gmail.com
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
