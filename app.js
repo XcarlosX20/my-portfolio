@@ -67,14 +67,14 @@ const validateForm = () => {
     });
 };
 const getProjects = async () => {
-    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/ddb4caecb3d278844759381c8d8660118882fa4e/projectslist.json");
+    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/cc3fa43d0ce39448041def8561ebb5bd2707529c/projectslist.json");
     const res = await url.json();
     const projects =  await res;
     const listPortafolio = document.querySelector("#list-portafolio");
     
     
     projects.forEach(project=>{
-        const {imageURL, name, tecnologies}=project;
+        const {imageURL, name, tecnologies, url}=project;
         const formatTxt = (arr) => {
             let elements = "";
             for (let i = 0; i < arr.length; i++) {
@@ -88,10 +88,9 @@ const getProjects = async () => {
             <div class="card-img">
                 <div class="buttons" id="buttons">
                     <button class="animate__animated">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                        </svg>
+                        <i class="bi bi-eye-fill">
+                            <a href=${url}></a>
+                        </i>
                     </button>
                     <button class="animate__animated">
                         <i class="bi bi-github"></i>

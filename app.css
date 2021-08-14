@@ -654,6 +654,9 @@ li:hover {
   background-blend-mode: screen, overlay;
   padding: 1rem;
   width: 100%; }
+  .portfolio h3 {
+    margin-bottom: 1.5rem;
+    text-align: center; }
   @media (min-width: 768px) {
     .portfolio {
       padding: 3rem 2rem; } }
@@ -694,24 +697,26 @@ li:hover {
     .buttons {
       visibility: hidden;
       gap: 2.5rem; } }
+  .buttons:hover a {
+    transition: ease .3s all; }
   @media (min-width: 768px) {
     .buttons:hover {
       transition: all .3s ease;
       background-color: rgba(0, 0, 0, 0.15); } }
-  .buttons button {
+  .buttons a {
     width: 4rem;
     height: 4rem;
-    transition: all .3s ease;
     cursor: pointer;
     color: #FFF;
     background-color: #264653;
     border: none;
+    text-align: center;
     padding: 1rem;
     border-radius: 50%; }
-    .buttons button:hover {
+    .buttons a:hover {
       color: #E76F51;
       transform: scale(1.04); }
-    .buttons button:active {
+    .buttons a:active {
       transform: scale(0.8); }
 
 .contact {
