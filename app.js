@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     NavFixed();
     validateForm();
 });
-mainItems.forEach(item=>{
-    item.addEventListener("click",()=>{
+mainItems.forEach(item => {
+    item.addEventListener("click", () => {
         main.classList.add("hidden");
         btnBurguer.classList.remove("active");
     });
@@ -24,7 +24,7 @@ function btnBurguerFn() {
         btnBurguer.classList.toggle("active");
         main.classList.toggle("hidden");
     });
-    
+
 };
 function NavFixed() {
     const span = document.querySelector(".span");
@@ -46,7 +46,7 @@ function NavFixed() {
 }
 function scrollNav() {
     links.forEach(link => {
-        link.addEventListener('click', (e) => {               
+        link.addEventListener('click', (e) => {
             e.preventDefault();
             const section = document.querySelector(e.target.attributes.href.value);
             section.scrollIntoView({
@@ -57,44 +57,44 @@ function scrollNav() {
 };
 const validateForm = () => {
     const form = document.querySelector('form');
-    form.addEventListener("submit",(e)=>{;
+    form.addEventListener("submit", (e) => {
+        ;
         const name = document.getElementsByName("name");
         const email = document.getElementsByName("email");
         const message = document.getElementsByName("message");
-        if(name[0].value === "" || email[0].value === "" || message[0].value === "" ){
+        if (name[0].value === "" || email[0].value === "" || message[0].value === "") {
             e.preventDefault();
         }
     });
 };
 const getProjects = async () => {
-    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/cc3fa43d0ce39448041def8561ebb5bd2707529c/projectslist.json");
+    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/9a769f3f58f194af7181db29c6d31010885190a7/projectslist.json");
     const res = await url.json();
-    const projects =  await res;
+    const projects = await res;
     const listPortafolio = document.querySelector("#list-portafolio");
-    
-    
-    projects.forEach(project=>{
-        const {imageURL, name, tecnologies, url}=project;
+
+
+    projects.forEach(project => {
+        const { imageURL, name, tecnologies, url, urlGitHub } = project;
+        console.log(url);
         const formatTxt = (arr) => {
             let elements = "";
             for (let i = 0; i < arr.length; i++) {
-               elements += `${arr[i]}, `;
+                elements += `${arr[i]}, `;
             }
             let txt = elements.substring(0, elements.length - 2) + ".";
             return txt;
         }
         let card =
-        `<div class="project-card">
+            `<div class="project-card">
             <div class="card-img">
                 <div class="buttons" id="buttons">
-                    <button class="animate__animated">
-                        <i class="bi bi-eye-fill">
-                            <a href=${url}></a>
-                        </i>
-                    </button>
-                    <button class="animate__animated">
-                        <i class="bi bi-github"></i>
-                    </button>
+                    <a href="${url}" target="_blank" class="animate__animated">
+                            <i class="bi bi-eye-fill"></i>
+                    </a>
+                    <a href="${urlGitHub}" target="_blank" class="animate__animated">
+                            <i class="bi bi-github"></i>
+                    </a>
                 </div>
                 <img src=${imageURL} alt="react-weather">
             </div>
@@ -103,7 +103,7 @@ const getProjects = async () => {
                 <p>Build in: <span>${formatTxt(tecnologies)}</span></p>
             </div>
          </div>`
-         listPortafolio.innerHTML += card;
-         
+        listPortafolio.innerHTML += card;
+
     });
 }
