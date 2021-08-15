@@ -662,21 +662,26 @@ li:hover {
       padding: 3rem 2rem; } }
   .portfolio .list-portafolio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem; }
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem; }
     @media (min-width: 768px) {
       .portfolio .list-portafolio {
         grid-template-columns: repeat(3, 1fr); } }
 
-@media (min-width: 768px) {
-  .project-card:hover .buttons {
-    visibility: visible; } }
+.project-card {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 6px; }
+  @media (min-width: 768px) {
+    .project-card:hover .buttons {
+      visibility: visible; } }
+  .project-card p {
+    margin: 10px 0; }
 
-.project-card p {
-  margin: 10px 0; }
-
-.card-info p:last-child {
-  font-size: 1.6rem; }
+.card-info {
+  padding: 4px 10px; }
+  .card-info p:last-child {
+    font-size: 1.6rem; }
 
 .card-img {
   position: relative;
