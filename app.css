@@ -686,9 +686,13 @@ li:hover {
 .card-img {
   position: relative;
   width: 100%;
+  height: 300px;
   transition: all .2s ease-in; }
   .card-img:hover {
     transform: translateY(-3px); }
+  .card-img img {
+    height: 100%;
+    width: 100%; }
 
 .buttons {
   position: absolute;
