@@ -68,7 +68,7 @@ const validateForm = () => {
     });
 };
 const getProjects = async () => {
-    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/7867defcf51d0ea46fa43e46890dc4dd58c483c1/projectslist.json");
+    const url = await fetch("https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/72e8096cb59e7e905cbe36ef3670e05a64fd3f30/projectslist.json");
     const res = await url.json();
     const projects = await res;
     const listPortafolio = document.querySelector("#list-portafolio");
